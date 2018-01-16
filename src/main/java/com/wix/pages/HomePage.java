@@ -12,6 +12,11 @@ public class HomePage extends PageObject{
 	By pageTitle = By.cssSelector(".page-title");
 	By getStarted = By.xpath("//div[@class='inner']/*[text()='Get Started']");
 	
+	public HomePage(){
+		if(getDriver() != null)
+			getDriver().manage().window().maximize();
+	}
+	
 	public void verifyGetStartedButton(){
 		Assert.assertTrue("Get started button is not found", element(getStarted).isCurrentlyVisible());
 	}
