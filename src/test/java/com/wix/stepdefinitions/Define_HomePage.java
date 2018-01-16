@@ -19,7 +19,7 @@ public class Define_HomePage{
 	}
 
 	@When("the user lands on the homepage")
-	public void whenTheUserLandsOnTheHomepage(String expectedTitle) {
+	public void whenTheUserLandsOnTheHomepage() {
 	  homePageSteps.verify_get_started_button_is_visible();
 	}
 
